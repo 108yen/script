@@ -1,0 +1,4 @@
+{
+  "words": ["lefthook", "tsdown"],
+  "ignorePaths": ["dist", "node_modules", ".eslintcache"]
+}
