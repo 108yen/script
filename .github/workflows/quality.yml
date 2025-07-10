@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  eslint:
+  lint:
     name: ESLint
 
     runs-on: ubuntu-latest
@@ -42,7 +42,7 @@ jobs:
       - name: Run lint
         run: pnpm lint
 
-  prettier:
+  format:
     name: Prettier
 
     runs-on: ubuntu-latest
@@ -68,7 +68,7 @@ jobs:
       - name: Run format
         run: pnpm format:check
 
-  typescript:
+  typecheck:
     name: Typescript
 
     runs-on: ubuntu-latest
@@ -93,6 +93,41 @@ jobs:
 
       - name: Run typecheck
         run: pnpm typecheck
+
+  test:
+    name: Vitest
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run tests
+        run: pnpm test
+
+      # Uncomment the following lines if you want to run tests with coverage and upload to Codecov
+      # - name: Run test
+      #   run: pnpm test:coverage
+
+      # - name: Upload coverage reports to Codecov
+      #   uses: codecov/codecov-action@v5
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }}
 
   build:
     name: Build
