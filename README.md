@@ -9,6 +9,7 @@ A template repository for building npm script projects with TypeScript, ESLint, 
 3. Update `package.json` config
    - `name`
    - `repository`
+   - `bin.script`
 
 4. Update `.changeset/config.json`
    - repo url

@@ -11,6 +11,7 @@ import {
   languageOptionFactory,
   perfectionistConfig,
   typescriptConfig,
+  vitestConfig,
 } from "./.eslint"
 
 const ignoresConfig: Linter.Config = {
@@ -39,6 +40,7 @@ const config: TSESLint.FlatConfig.ConfigArray = tseslint.config(
   prettierConfig,
   perfectionistConfig,
   cspellConfig,
+  vitestConfig,
 )
 
 export default typegen(config as Linter.Config[], {

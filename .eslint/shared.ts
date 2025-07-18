@@ -9,3 +9,5 @@ export const sharedFiles = [
   "**/*.tsx",
   "**/*.d.ts",
 ]
+
+export const sharedTestFiles = ["**/*.test.ts"]
