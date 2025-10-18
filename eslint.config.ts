@@ -1,14 +1,13 @@
-import type { TSESLint } from "@typescript-eslint/utils"
 import type { Linter } from "eslint"
 import prettierConfig from "eslint-config-prettier"
 import typegen from "eslint-typegen"
-import { resolve } from "node:path"
-import tseslint from "typescript-eslint"
+import { defineConfig } from "eslint/config"
 import {
   baseConfig,
   cspellConfig,
   importConfigArray,
-  languageOptionFactory,
+  languageOptions,
+  linterOptions,
   perfectionistConfig,
   typescriptConfig,
   vitestConfig,
@@ -28,12 +27,10 @@ const ignoresConfig: Linter.Config = {
   name: "eslint/ignores",
 }
 
-const tsConfigPath = resolve(__dirname, "./tsconfig.json")
-const languageOptionConfig = languageOptionFactory(tsConfigPath)
-
-const config: TSESLint.FlatConfig.ConfigArray = tseslint.config(
+const config: Linter.Config[] = defineConfig(
+  linterOptions,
   ignoresConfig,
-  languageOptionConfig,
+  languageOptions,
   ...importConfigArray,
   baseConfig,
   typescriptConfig,
@@ -43,6 +40,6 @@ const config: TSESLint.FlatConfig.ConfigArray = tseslint.config(
   vitestConfig,
 )
 
-export default typegen(config as Linter.Config[], {
+export default typegen(config, {
   dtsPath: "./@types/eslint-typegen.d.ts",
 })
