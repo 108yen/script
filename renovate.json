@@ -6,5 +6,11 @@
   "rebaseWhen": "conflicted",
   "timezone": "Asia/Tokyo",
   "prHourlyLimit": 10,
-  "automerge": true
+  "automerge": true,
+  "packageRules": [
+    {
+      "matchDatasources": ["npm"],
+      "minimumReleaseAge": "7 days"
+    }
+  ]
 }
