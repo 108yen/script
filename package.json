@@ -40,7 +40,7 @@
     "url": "https://github.com/108yen/script.git"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/changelog-github": "^0.6.0",
     "@changesets/cli": "^2.29.5",
     "@commitlint/cli": "^20.0.0",
     "@commitlint/config-conventional": "^20.0.0",
