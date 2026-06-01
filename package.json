@@ -27,7 +27,7 @@
   "keywords": [],
   "author": "108yen",
   "license": "MIT",
-  "packageManager": "pnpm@10.33.2",
+  "packageManager": "pnpm@10.33.4",
   "files": [
     "dist",
     "bin"
