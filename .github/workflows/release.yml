@@ -41,7 +41,7 @@ jobs:
         run: pnpm install
 
       - name: Create Release Pull Request or Publish to npm
-        uses: changesets/action@v1
+        uses: changesets/action@v2.1.1
         with:
           commit: "ci(changesets): updated changelog"
           publish: pnpm release
