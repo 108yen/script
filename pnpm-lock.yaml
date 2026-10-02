@@ -64,7 +64,7 @@ importers:
         version: 4.15.1(eslint@9.39.5(jiti@2.7.0))(typescript@5.9.3)
       eslint-plugin-prettier:
         specifier: ^5.5.1
-        version: 5.5.6(eslint-config-prettier@10.1.8(eslint@9.39.5(jiti@2.7.0)))(eslint@9.39.5(jiti@2.7.0))(prettier@3.9.6)
+        version: 5.5.6(eslint-config-prettier@10.1.8(eslint@9.39.5(jiti@2.7.0)))(eslint@9.39.5(jiti@2.7.0))(prettier@3.9.9)
       eslint-plugin-unused-imports:
         specifier: ^4.1.4
         version: 4.4.1(@typescript-eslint/eslint-plugin@8.68.0(@typescript-eslint/parser@8.68.0(eslint@9.39.5(jiti@2.7.0))(typescript@5.9.3))(eslint@9.39.5(jiti@2.7.0))(typescript@5.9.3))(eslint@9.39.5(jiti@2.7.0))
@@ -82,7 +82,7 @@ importers:
         version: 2.1.14
       prettier:
         specifier: ^3.6.2
-        version: 3.9.6
+        version: 3.9.9
       tsdown:
         specifier: ^0.22.0
         version: 0.22.14(tsx@4.23.12)(typescript@5.9.3)(unrun@0.2.37(synckit@0.11.13))
@@ -2935,8 +2935,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.9.6:
-    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
+  prettier@3.9.9:
+    resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5461,10 +5461,10 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-prettier@5.5.6(eslint-config-prettier@10.1.8(eslint@9.39.5(jiti@2.7.0)))(eslint@9.39.5(jiti@2.7.0))(prettier@3.9.6):
+  eslint-plugin-prettier@5.5.6(eslint-config-prettier@10.1.8(eslint@9.39.5(jiti@2.7.0)))(eslint@9.39.5(jiti@2.7.0))(prettier@3.9.9):
     dependencies:
       eslint: 9.39.5(jiti@2.7.0)
-      prettier: 3.9.6
+      prettier: 3.9.9
       prettier-linter-helpers: 1.0.1
       synckit: 0.11.13
     optionalDependencies:
@@ -6269,7 +6269,7 @@ snapshots:
 
   prettier@2.8.8: {}
 
-  prettier@3.9.6: {}
+  prettier@3.9.9: {}
 
   punycode@2.3.1: {}
 
